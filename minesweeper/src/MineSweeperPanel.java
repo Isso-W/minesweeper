@@ -39,6 +39,10 @@ public class MineSweeperPanel {
      * @param  y  position of the grid
      */
     public void check(int x, int y){
+        if(board[x][y].isMine()){
+            return;
+        }
+
 
     }
 
