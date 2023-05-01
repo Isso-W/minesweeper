@@ -1,13 +1,31 @@
+import java.util.*;
 public class MineSweeperPanel {
+    public MineSweeperTile[][] board;
     /**
      * Start a new game.
      *
-     * @param  numRows  number of rows
-     * @param  numCols  number of columns
+     * @param  x  number of columns
+     * @param  x  number of rows
      * @param  numMines  number of Mines
      */
-    public void reset(int numRows, int numCols, int numMines){
+    public void reset(int x, int y, int numMines){
+        //create panel
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                board[i][j] = new MineSweeperTile();
+            }
+        }
 
+        //set mines
+        Random random = new Random();
+        int xValue = random.nextInt(x);
+        int yValue = random.nextInt(y);
+        while (numMines != 0){
+            if (!board[xValue][yValue].isMine()) {
+                board[xValue][yValue].setMine();
+                numMines--;
+            }
+        }
     }
 
     /**
