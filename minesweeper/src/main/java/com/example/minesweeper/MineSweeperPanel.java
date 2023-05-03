@@ -1,3 +1,4 @@
+package com.example.minesweeper;
 import java.util.*;
 public class MineSweeperPanel {
     public MineSweeperTile[][] board;
@@ -42,8 +43,7 @@ public class MineSweeperPanel {
         if(board[x][y].isMine()){
             return;
         }
-
-
+        //TODO
     }
 
     /**
@@ -52,7 +52,7 @@ public class MineSweeperPanel {
      * @param  y  position of the grid
      */
     private void flag(int x, int y){
-
+        //TODO
     }
 
 }

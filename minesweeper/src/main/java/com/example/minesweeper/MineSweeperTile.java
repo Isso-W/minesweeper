@@ -1,3 +1,5 @@
+package com.example.minesweeper;
+
 public class MineSweeperTile {
     private boolean isMine = false;
 
